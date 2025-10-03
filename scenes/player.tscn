@@ -8,6 +8,7 @@ size = Vector2(77.5, 130)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
+jump_force = 1000
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -65)
