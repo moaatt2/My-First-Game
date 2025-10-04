@@ -11,7 +11,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = min(velocity.y + gravity, 500)
 
 	# Jump logic
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") && is_on_floor():
 		velocity.y = -jump_force
 
 	# Movement logic
