@@ -25,11 +25,7 @@ func get_levels(path) -> void:
 
 func create_level_button(level_path: String, level_name: String) -> void:
 	var button = LEVEL_BUTTON.instantiate()
-	button.text = level_name
+	button.text = level_name.trim_suffix('.tscn').trim_prefix('level_')
 	button.level_path = level_path
-	
-	print('Button made with')
-	print("Level Path: ", level_path)
-	print("Level Name: ", level_name)
-	
+
 	grid.add_child(button)
