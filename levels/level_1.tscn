@@ -21,7 +21,7 @@ text = "Level 1"
 [node name="BackButton" parent="." instance=ExtResource("1_vn7o3")]
 offset_left = 16.0
 offset_top = 16.0
-offset_right = 157.0
-offset_bottom = 104.0
+offset_right = 136.0
+offset_bottom = 96.0
 text = "Back"
 level_path = "uid://ddcb3d6iub6se"
