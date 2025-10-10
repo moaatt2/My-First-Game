@@ -4,7 +4,8 @@ const LEVEL_BUTTON = preload("res://gui/level_button.tscn")
 
 @export_dir var dir_path
 
-@onready var grid = $MarginContainer/VBoxContainer/GridContainer
+#@onready var grid = $MarginContainer/VBoxContainer/GridContainer
+@onready var grid = $MarginContainer/VBoxContainer/HFlowContainer
 
 func _ready() -> void:
 	get_levels(dir_path)
