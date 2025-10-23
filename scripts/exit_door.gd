@@ -5,11 +5,27 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group('Player'):
 		print("Collison Detected")
 		
-		var current_scene_file = get_tree().current_scene.scene_file_path
-		var next_level_number = current_scene_file.to_int() + 1
-		var next_level_path = ""
-		if next_level_number < 10:
-			next_level_path = "res://levels/level_0" + str(next_level_number) + ".tscn"
-		else:
-			next_level_path = "res://levels/level_" + str(next_level_number) + ".tscn"
-		get_tree().change_scene_to_file(next_level_path)
+		# Get current level
+		var current_scene_path = get_tree().current_scene.scene_file_path
+		var current_scene_name = current_scene_path.get_file()
+
+		# Get directory path
+		var dir_path = current_scene_path.get_base_dir()
+		var dir = DirAccess.open(dir_path)
+
+		# Get list of all levels
+		var files = []
+		if dir:
+			for file_name in dir.get_files():
+				if file_name.ends_with(".tscn"):
+					files.append(file_name)
+		files.sort()
+		
+		# Get index of current file
+		var current_index = files.find(current_scene_name)
+		if current_index != -1 and current_index <= files.size():
+			print(dir_path)
+			print(files)
+			print(files[current_index + 1])
+			var next_scene_path = dir_path + "/" + files[current_index + 1]
+			get_tree().change_scene_to_file(next_scene_path)
