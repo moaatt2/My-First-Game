@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddcb3d6iub6se"]
 
-[ext_resource type="Script" uid="uid://dvdgowtegc585" path="res://gui/level_select_screen.gd" id="1_uuotp"]
+[ext_resource type="Script" uid="uid://dvdgowtegc585" path="res://scripts/level_select_screen.gd" id="1_uuotp"]
 
 [node name="LevelSelectScreen" type="Node2D"]
 script = ExtResource("1_uuotp")

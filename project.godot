@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="First Game Project"
-run/main_scene="uid://b0etdt22njj1g"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
