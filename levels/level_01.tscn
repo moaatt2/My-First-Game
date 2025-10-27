@@ -10,7 +10,7 @@
 size = Vector2(11.509999, 0.3000003)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81a5f"]
-size = Vector2(0.120000005, 6.18)
+size = Vector2(0.029800002, 0.013300039)
 
 [node name="Level1" type="Node2D"]
 
