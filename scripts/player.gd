@@ -38,3 +38,6 @@ func start_dash():
 
 func stop_dash():
 	is_dashing = false
+
+func add_charge(ability) -> void:
+	print("Adding Charge")
