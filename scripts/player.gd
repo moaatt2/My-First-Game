@@ -8,6 +8,9 @@ var DASH_SPEED = 4
 var is_dashing = false
 var ability_queue = []
 
+const ability_dash = preload("res://scenes/ability_dash.tscn")
+const ability_jump = preload("res://scenes/ability_jump.tscn")
+
 func _physics_process(delta: float) -> void:
 	# Falling logic
 	if !is_on_floor():
@@ -20,9 +23,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("action"):
 		if ability_queue.size() > 0:
 			var action = ability_queue.pop_front()
-			if action == "jump":
+			if action[0] == "jump":
 				velocity.y = -jump_force
-			elif action == "dash":
+			elif action[0] == "dash":
 				if !is_dashing and horizontal_direction:
 					start_dash()
 			else:
@@ -35,7 +38,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = speed * horizontal_direction
 	move_and_slide()
 
-	print(velocity)
+	#print(velocity)
 
 func start_dash():
 	is_dashing = true
