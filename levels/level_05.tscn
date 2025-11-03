@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcqpu5rrnu8a4"]
+
+[ext_resource type="PackedScene" uid="uid://d1jto5xje8v3o" path="res://levels/level_01.tscn" id="1_eyhsw"]
+[ext_resource type="PackedScene" uid="uid://ca2872q7qceir" path="res://scenes/ability_jump.tscn" id="2_fl8gq"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_fl8gq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07l6b"]
+size = Vector2(0.0106000025, 0.046499986)
+
+[node name="Level1" instance=ExtResource("1_eyhsw")]
+
+[node name="Label" parent="CenterContainer" index="0"]
+text = "Level 5"
+
+[node name="Jump" parent="." index="7" instance=ExtResource("2_fl8gq")]
+position = Vector2(50, 590)
+
+[node name="Jump2" parent="." index="8" instance=ExtResource("2_fl8gq")]
+position = Vector2(850, 375)
+
+[node name="Obstacle 1" type="StaticBody2D" parent="." index="9"]
+position = Vector2(100.99914, -4848.0005)
+scale = Vector2(10000, 10000)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 1" index="0"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0.08360009, 0.52335)
+scale = Vector2(0.010600012, 0.046499945)
+mesh = SubResource("QuadMesh_fl8gq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle 1" index="1"]
+position = Vector2(0.08360009, 0.52335006)
+shape = SubResource("RectangleShape2D_07l6b")

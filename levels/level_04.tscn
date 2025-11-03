@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://pfn664jusae5"]
+
+[ext_resource type="PackedScene" uid="uid://d1jto5xje8v3o" path="res://levels/level_01.tscn" id="1_vosiq"]
+[ext_resource type="PackedScene" uid="uid://ca2872q7qceir" path="res://scenes/ability_jump.tscn" id="2_hgv6m"]
+[ext_resource type="PackedScene" uid="uid://chl4syoif26l2" path="res://scenes/ability_dash.tscn" id="3_5p57d"]
+
+[node name="Level1" instance=ExtResource("1_vosiq")]
+
+[node name="Label" parent="CenterContainer" index="0"]
+text = "Level 4"
+
+[node name="Jump" parent="." index="8" instance=ExtResource("2_hgv6m")]
+position = Vector2(51, 592)
+
+[node name="Dash" parent="." index="10" instance=ExtResource("3_5p57d")]
+position = Vector2(158, 594)
