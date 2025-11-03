@@ -19,6 +19,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			for file_name in dir.get_files():
 				if file_name.ends_with(".tscn"):
 					files.append(file_name)
+				if file_name.ends_with(".tscn.remap"):
+					files.append(file_name.trim_suffix(".remap"))
 		files.sort()
 		
 		# Get index of current file

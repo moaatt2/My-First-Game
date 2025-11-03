@@ -4,7 +4,6 @@ const LEVEL_BUTTON = preload("res://scenes/level_button.tscn")
 
 @export_dir var dir_path
 
-#@onready var grid = $MarginContainer/VBoxContainer/GridContainer
 @onready var grid = $MarginContainer/VBoxContainer/HFlowContainer
 
 func _ready() -> void:
@@ -27,6 +26,7 @@ func get_levels(path) -> void:
 func create_level_button(level_path: String, level_name: String) -> void:
 	var button = LEVEL_BUTTON.instantiate()
 	button.text = level_name.trim_suffix('.tscn').trim_prefix('level_').trim_prefix('0')
-	button.level_path = level_path
+	#button.level_path = level_path
+	button.level_path = level_path.trim_suffix(".remap")
 
 	grid.add_child(button)
