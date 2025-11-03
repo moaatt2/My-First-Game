@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://btr7kck0a27wx"]
+
+[ext_resource type="Script" uid="uid://ypfsss5xfdce" path="res://scripts/info_overlay.gd" id="1_0q13e"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_0q13e")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = -1
+offset_left = 120.0
+offset_top = 40.0
+offset_right = 1032.0
+offset_bottom = 134.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="ColorRect  (Slot 1)" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="ColorRect  (Slot 2)" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="ColorRect  (Slot 3)" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="ColorRect  (Slot 4)" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="ColorRect  (Slot 5)" type="ColorRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
