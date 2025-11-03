@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1jto5xje8v3o"]
+[gd_scene load_steps=8 format=3 uid="uid://d1jto5xje8v3o"]
 
 [ext_resource type="PackedScene" uid="uid://b8826of3fxi4n" path="res://scenes/level_button.tscn" id="1_vn7o3"]
 [ext_resource type="PackedScene" uid="uid://5e27c4l0dy1t" path="res://scenes/player.tscn" id="2_mckh2"]
 [ext_resource type="PackedScene" uid="uid://c1peiq0gsxjlc" path="res://scenes/exit_door.tscn" id="3_81a5f"]
+[ext_resource type="PackedScene" uid="uid://btr7kck0a27wx" path="res://scenes/info_overlay.tscn" id="3_gg43x"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ty3hu"]
 
@@ -80,6 +81,8 @@ shape = SubResource("RectangleShape2D_81a5f")
 
 [node name="ExitDoor" parent="." instance=ExtResource("3_81a5f")]
 position = Vector2(1054, 618)
+
+[node name="InfoOverlay" parent="." instance=ExtResource("3_gg43x")]
 
 [node name="Player" parent="." instance=ExtResource("2_mckh2")]
 position = Vector2(105, 618)
