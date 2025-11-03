@@ -22,12 +22,19 @@ func _physics_process(delta: float) -> void:
 	# Handle action
 	if Input.is_action_just_pressed("action"):
 		if ability_queue.size() > 0:
+			var level_node = get_parent()
 			var action = ability_queue.pop_front()
 			if action[0] == "jump":
 				velocity.y = -jump_force
+				var new_jump = ability_jump.instantiate()
+				level_node.add_child(new_jump)
+				new_jump.position = Vector2(action[1], action[2])
 			elif action[0] == "dash":
 				if !is_dashing and horizontal_direction:
 					start_dash()
+					var new_dash = ability_dash.instantiate()
+					level_node.add_child(new_dash)
+					new_dash.position = Vector2(action[1], action[2])
 			else:
 				print("Unknown Action: " + str(action))
 
