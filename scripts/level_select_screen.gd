@@ -25,7 +25,7 @@ func get_levels(path) -> void:
 
 func create_level_button(level_path: String, level_name: String) -> void:
 	var button = LEVEL_BUTTON.instantiate()
-	button.text = level_name.trim_suffix('.tscn').trim_prefix('level_').trim_prefix('0')
+	button.text = level_name.trim_suffix(".remap").trim_suffix('.tscn').trim_prefix('level_').trim_prefix('0')
 	#button.level_path = level_path
 	button.level_path = level_path.trim_suffix(".remap")
 
