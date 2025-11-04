@@ -11,7 +11,7 @@
 size = Vector2(11.509999, 0.3000003)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81a5f"]
-size = Vector2(0.029800002, 0.013300039)
+size = Vector2(0.11999916, 6.1800003)
 
 [node name="Level1" type="Node2D"]
 
@@ -76,7 +76,7 @@ scale = Vector2(0.12000056, 6.180001)
 mesh = SubResource("QuadMesh_ty3hu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall"]
-position = Vector2(0.050000086, 3.57)
+position = Vector2(0.05000019, 3.57)
 shape = SubResource("RectangleShape2D_81a5f")
 
 [node name="ExitDoor" parent="." instance=ExtResource("3_81a5f")]
