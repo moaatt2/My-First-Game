@@ -9,3 +9,9 @@ color = Color(0.6666667, 0.6666667, 0.6666667, 1)
 
 [node name="Label" parent="CenterContainer" index="0"]
 text = "Level 10"
+
+[node name="Reset Button" parent="." index="3"]
+level_path = "uid://dpl0jyyesjjep"
+
+[node name="CollisionShape2D" parent="Right Wall" index="1"]
+position = Vector2(0.050000086, 3.57)

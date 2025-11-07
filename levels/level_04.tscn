@@ -17,6 +17,9 @@ size = Vector2(0.029800002, 0.012699945)
 [node name="Label" parent="CenterContainer" index="0"]
 text = "Level 4"
 
+[node name="Reset Button" parent="." index="3"]
+level_path = "uid://pfn664jusae5"
+
 [node name="Obstacle 1" type="StaticBody2D" parent="." index="8"]
 position = Vector2(100.99914, -4848.0005)
 scale = Vector2(10000, 10000)

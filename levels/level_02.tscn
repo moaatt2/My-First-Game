@@ -16,6 +16,9 @@ color = Color(0.6, 0.6, 0.6, 1)
 [node name="Label" parent="CenterContainer" index="0"]
 text = "Level 2"
 
+[node name="Reset Button" parent="." index="3"]
+level_path = "uid://5nb3osh5xkkw"
+
 [node name="Obstacle 1" type="StaticBody2D" parent="." index="6"]
 position = Vector2(100.99914, -4848.0005)
 scale = Vector2(10000, 10000)
