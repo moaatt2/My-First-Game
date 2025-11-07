@@ -6,10 +6,9 @@
 script = ExtResource("1_0q13e")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-anchors_preset = -1
-offset_left = 120.0
+offset_left = 260.0
 offset_top = 40.0
-offset_right = 1032.0
+offset_right = 892.0
 offset_bottom = 134.0
 theme_override_constants/separation = 10
 alignment = 1
