@@ -43,6 +43,7 @@ func _physics_process(delta: float) -> void:
 	# Handle Dash
 	if is_dashing:
 		velocity.x = speed * DASH_SPEED * horizontal_direction
+		velocity.y = 0
 	else:
 		velocity.x = speed * horizontal_direction
 	move_and_slide()
