@@ -7,10 +7,10 @@
 [sub_resource type="QuadMesh" id="QuadMesh_hgv6m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5p57d"]
-size = Vector2(0.029800002, 0.013349918)
+size = Vector2(0.029800002, 0.0133000305)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgv6m"]
-size = Vector2(0.029800002, 0.013299926)
+size = Vector2(0.029800002, 0.0133000575)
 
 [node name="Level1" instance=ExtResource("1_vosiq")]
 
@@ -23,12 +23,12 @@ scale = Vector2(10000, 10000)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 1" index="0"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(0.024399877, 0.5399499)
-scale = Vector2(0.029800007, 0.013299979)
+position = Vector2(0.027400136, 0.58115005)
+scale = Vector2(0.029800007, 0.01330002)
 mesh = SubResource("QuadMesh_hgv6m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle 1" index="1"]
-position = Vector2(0.024400078, 0.539975)
+position = Vector2(0.027400084, 0.58115005)
 shape = SubResource("RectangleShape2D_5p57d")
 
 [node name="Obstacle 2" type="StaticBody2D" parent="." index="9"]
@@ -37,16 +37,16 @@ scale = Vector2(10000, 10000)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 2" index="0"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(0.0613003, 0.5399499)
-scale = Vector2(0.029800436, 0.0132996645)
+position = Vector2(0.06900191, 0.58115005)
+scale = Vector2(0.029800436, 0.0133000435)
 mesh = SubResource("QuadMesh_hgv6m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle 2" index="1"]
-position = Vector2(0.061300065, 0.53995)
+position = Vector2(0.06900002, 0.58115)
 shape = SubResource("RectangleShape2D_hgv6m")
 
 [node name="Jump" parent="." index="10" instance=ExtResource("2_hgv6m")]
-position = Vector2(160, 595)
+position = Vector2(135, 1000)
 
 [node name="Dash" parent="." index="12" instance=ExtResource("3_5p57d")]
-position = Vector2(345, 465)
+position = Vector2(375, 875)

@@ -8,8 +8,5 @@
 [node name="Label" parent="CenterContainer" index="0"]
 text = "Level 3"
 
-[node name="Reset Button" parent="." index="3"]
-level_path = "uid://b464np1hui7xa"
-
 [node name="Dash" parent="." index="7" instance=ExtResource("3_p0vsl")]
-position = Vector2(158, 594)
+position = Vector2(150, 1000)

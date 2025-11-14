@@ -6,7 +6,7 @@
 [sub_resource type="QuadMesh" id="QuadMesh_ty3hu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g685p"]
-size = Vector2(0.029800002, 0.013299961)
+size = Vector2(0.029800002, 0.013299943)
 
 [node name="Level2" instance=ExtResource("1_mi4ay")]
 
@@ -16,22 +16,19 @@ color = Color(0.6, 0.6, 0.6, 1)
 [node name="Label" parent="CenterContainer" index="0"]
 text = "Level 2"
 
-[node name="Reset Button" parent="." index="3"]
-level_path = "uid://5nb3osh5xkkw"
-
 [node name="Obstacle 1" type="StaticBody2D" parent="." index="6"]
 position = Vector2(100.99914, -4848.0005)
 scale = Vector2(10000, 10000)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 1" index="0"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(0.047600087, 0.53995)
-scale = Vector2(0.029800007, 0.013299979)
+position = Vector2(0.05400014, 0.58115005)
+scale = Vector2(0.029800007, 0.013300003)
 mesh = SubResource("QuadMesh_ty3hu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle 1" index="1"]
-position = Vector2(0.04760008, 0.53995)
+position = Vector2(0.054000083, 0.58115)
 shape = SubResource("RectangleShape2D_g685p")
 
 [node name="Jump" parent="." index="8" instance=ExtResource("2_g685p")]
-position = Vector2(162, 591)
+position = Vector2(160, 1000)

@@ -30,24 +30,24 @@ position = Vector2(1140, -47.999996)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" index="0"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(79.5, 403)
+position = Vector2(99.49999, 815)
 scale = Vector2(135, 430)
 mesh = SubResource("QuadMesh_fq3ah")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="1"]
-position = Vector2(79.5, 403)
+position = Vector2(99.5, 815)
 shape = SubResource("RectangleShape2D_4rvgf")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." index="8"]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D2" index="0"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(1071.5, 480.49997)
-scale = Vector2(135, 275.00003)
+position = Vector2(1820.5, 892.5)
+scale = Vector2(134.99994, 275.00003)
 mesh = SubResource("QuadMesh_4rvgf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" index="1"]
-position = Vector2(1071.5, 480.5)
+position = Vector2(1820.5, 892.5)
 shape = SubResource("RectangleShape2D_hd1bg")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." index="9"]
@@ -57,26 +57,26 @@ position = Vector2(-139, 77)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D4" index="0"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(214.5, 543)
+position = Vector2(234.5, 955)
 scale = Vector2(135, 150.00002)
 mesh = SubResource("QuadMesh_hd1bg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" index="1"]
-position = Vector2(214.5, 543)
+position = Vector2(234.5, 955)
 shape = SubResource("RectangleShape2D_up3qn")
 
 [node name="ExitDoor" parent="." index="11"]
-position = Vector2(79.5, 188)
+position = Vector2(99.5, 600)
 
 [node name="Jump" parent="." index="12" instance=ExtResource("2_4rvgf")]
-position = Vector2(214.5, 445)
+position = Vector2(234.5, 860)
 
 [node name="Jump2" parent="." index="13" instance=ExtResource("2_4rvgf")]
-position = Vector2(382, 599)
+position = Vector2(355, 1005)
 
 [node name="Jump3" parent="." index="14" instance=ExtResource("2_4rvgf")]
-position = Vector2(1071.5, 325)
+position = Vector2(1820.5, 735)
 
 [node name="Player" parent="." index="16"]
-position = Vector2(575, 618)
+position = Vector2(961, 1030)
 jump_force = 750
