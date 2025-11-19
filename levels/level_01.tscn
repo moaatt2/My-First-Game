@@ -30,6 +30,16 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Level 1"
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 76.0
+offset_top = 873.0
+offset_right = 332.0
+offset_bottom = 950.0
+bbcode_enabled = true
+text = "Use [b]Right Arrow[/b] or [b]A[/b] to go right.
+
+Use [b]Left Arrow[/b] or [b]D[/b] to go left."
+
 [node name="BackButton" parent="." instance=ExtResource("1_vn7o3")]
 offset_left = 47.0
 offset_top = 15.0
