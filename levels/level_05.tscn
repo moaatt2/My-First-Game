@@ -13,6 +13,13 @@ size = Vector2(0.0106000025, 0.046500094)
 [node name="Label" parent="CenterContainer" index="0"]
 text = "Level 5"
 
+[node name="Tutorial Label" parent="." index="2"]
+visible = false
+offset_left = 102.0
+offset_top = 863.0
+offset_right = 358.0
+offset_bottom = 940.0
+
 [node name="Jump" parent="." index="7" instance=ExtResource("2_fl8gq")]
 position = Vector2(60, 1010)
 
@@ -33,5 +40,5 @@ mesh = SubResource("QuadMesh_fl8gq")
 position = Vector2(0.15030009, 0.56455)
 shape = SubResource("RectangleShape2D_07l6b")
 
-[node name="Player" parent="." index="12"]
+[node name="Player" parent="." index="13"]
 position = Vector2(115, 1030)
