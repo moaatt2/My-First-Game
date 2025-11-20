@@ -30,7 +30,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Level 1"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Tutorial Label" type="RichTextLabel" parent="."]
 offset_left = 76.0
 offset_top = 873.0
 offset_right = 332.0
