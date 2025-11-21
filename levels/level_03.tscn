@@ -8,5 +8,14 @@
 [node name="Label" parent="CenterContainer" index="0"]
 text = "Level 3"
 
+[node name="Tutorial Label" parent="." index="2"]
+offset_top = 829.0
+offset_right = 379.0
+text = "This is a [b]Dash Action Sphere[/b].
+
+After touching it press [b]Space[/b] to Dash.
+
+You [b]cannot fall[/b] while dashing."
+
 [node name="Dash" parent="." index="7" instance=ExtResource("3_p0vsl")]
 position = Vector2(150, 1000)
