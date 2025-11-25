@@ -18,10 +18,10 @@ size = Vector2(0.029800002, 0.0133000575)
 text = "Level 4"
 
 [node name="Tutorial Label" parent="." index="2"]
-offset_left = 830.0
-offset_top = 151.0
-offset_right = 1086.0
-offset_bottom = 246.0
+offset_left = 794.0
+offset_top = 143.0
+offset_right = 1125.0
+offset_bottom = 265.0
 text = "This is your [b]Action Queue[/b].
 
 Actions you pick up will be used in the order you pick them up in."

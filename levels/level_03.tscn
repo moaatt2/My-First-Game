@@ -9,8 +9,8 @@
 text = "Level 3"
 
 [node name="Tutorial Label" parent="." index="2"]
-offset_top = 829.0
-offset_right = 379.0
+offset_top = 808.0
+offset_right = 453.0
 text = "This is a [b]Dash Action Sphere[/b].
 
 After touching it press [b]Space[/b] to Dash.

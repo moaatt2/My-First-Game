@@ -18,8 +18,8 @@ text = "Level 2"
 
 [node name="Tutorial Label" parent="." index="2"]
 offset_left = 50.0
-offset_top = 876.0
-offset_right = 346.0
+offset_top = 859.0
+offset_right = 423.0
 offset_bottom = 953.0
 text = "This is a [b]Jump Action Sphere[/b].
 
