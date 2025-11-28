@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0yf5b3q0aoji"]
+
+[ext_resource type="PackedScene" uid="uid://d1jto5xje8v3o" path="res://levels/level_01.tscn" id="1_0mo6y"]
+[ext_resource type="PackedScene" uid="uid://bmpb87i8prvdq" path="res://scenes/obstacle.tscn" id="2_niyci"]
+[ext_resource type="PackedScene" uid="uid://ca2872q7qceir" path="res://scenes/ability_jump.tscn" id="3_f006g"]
+[ext_resource type="PackedScene" uid="uid://chl4syoif26l2" path="res://scenes/ability_dash.tscn" id="4_3c2ka"]
+
+[node name="Level1" instance=ExtResource("1_0mo6y")]
+
+[node name="Label" parent="CenterContainer" index="0"]
+text = "Level 7"
+
+[node name="Tutorial Label" parent="." index="2"]
+offset_left = 336.0
+offset_top = 681.0
+offset_right = 665.0
+offset_bottom = 768.0
+text = "Green blocks are poison, touching Them [b]resets the level.[/b]"
+
+[node name="Obstacle2" parent="." index="10" instance=ExtResource("2_niyci")]
+position = Vector2(500, 780)
+scale = Vector2(6, 4)
+
+[node name="Obstacle" parent="." index="11" instance=ExtResource("2_niyci")]
+position = Vector2(500, 990)
+scale = Vector2(6, 4)
+
+[node name="Jump" parent="." index="12" instance=ExtResource("3_f006g")]
+position = Vector2(225, 1010)
+
+[node name="Dash" parent="." index="13" instance=ExtResource("4_3c2ka")]
+position = Vector2(70, 1010)
+
+[node name="Player" parent="." index="14"]
+position = Vector2(140, 1030)
