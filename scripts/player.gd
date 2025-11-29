@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 				level_node.add_child(new_jump)
 				new_jump.position = Vector2(action[1], action[2])
 			elif action[0] == "dash":
-				if !is_dashing and horizontal_direction:
+				if !is_dashing:
 					start_dash()
 					await get_tree().create_timer(0.5).timeout # Delay respawn by 0.5 seconds
 					var new_dash = ability_dash.instantiate()
