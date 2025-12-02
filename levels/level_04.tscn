@@ -27,7 +27,7 @@ text = "This is your [b]Action Queue[/b].
 Actions you pick up will be used in the order you pick them up in."
 
 [node name="Obstacle 1" type="StaticBody2D" parent="." index="8"]
-position = Vector2(100.99914, -4848.0005)
+position = Vector2(120.99914, -4848.0005)
 scale = Vector2(10000, 10000)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 1" index="0"]
@@ -41,7 +41,7 @@ position = Vector2(0.027400084, 0.58115005)
 shape = SubResource("RectangleShape2D_5p57d")
 
 [node name="Obstacle 2" type="StaticBody2D" parent="." index="9"]
-position = Vector2(100.99914, -4848.0005)
+position = Vector2(120.99914, -4848.0005)
 scale = Vector2(10000, 10000)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 2" index="0"]
@@ -51,11 +51,14 @@ scale = Vector2(0.029800436, 0.0133000435)
 mesh = SubResource("QuadMesh_hgv6m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle 2" index="1"]
-position = Vector2(0.06900002, 0.58115)
+position = Vector2(0.06900001, 0.58115)
 shape = SubResource("RectangleShape2D_hgv6m")
 
 [node name="Jump" parent="." index="10" instance=ExtResource("2_hgv6m")]
-position = Vector2(135, 1000)
+position = Vector2(85, 1009)
 
 [node name="Dash" parent="." index="12" instance=ExtResource("3_5p57d")]
-position = Vector2(375, 875)
+position = Vector2(193, 1009)
+
+[node name="Player" parent="." index="14"]
+position = Vector2(139, 1030)
