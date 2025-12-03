@@ -31,12 +31,11 @@ func _physics_process(delta: float) -> void:
 				level_node.add_child(new_jump)
 				new_jump.position = Vector2(action[1], action[2])
 			elif action[0] == "dash":
-				if !is_dashing:
-					start_dash()
-					await get_tree().create_timer(0.5).timeout # Delay respawn by 0.5 seconds
-					var new_dash = ability_dash.instantiate()
-					level_node.add_child(new_dash)
-					new_dash.position = Vector2(action[1], action[2])
+				start_dash()
+				await get_tree().create_timer(0.5).timeout # Delay respawn by 0.5 seconds
+				var new_dash = ability_dash.instantiate()
+				level_node.add_child(new_dash)
+				new_dash.position = Vector2(action[1], action[2])
 			else:
 				print("Unknown Action: " + str(action))
 
@@ -50,9 +49,12 @@ func _physics_process(delta: float) -> void:
 
 	#print(velocity)
 
+# Set up dashtimer connection
+func _ready():
+	$DashTimer.connect("timeout", stop_dash)
+
 func start_dash():
 	is_dashing = true
-	$DashTimer.connect("timeout", stop_dash)
 	$DashTimer.start()
 
 func stop_dash():
