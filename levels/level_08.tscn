@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://dc2u7hytffg28"]
+
+[ext_resource type="PackedScene" uid="uid://d1jto5xje8v3o" path="res://levels/level_01.tscn" id="1_a1lxs"]
+[ext_resource type="PackedScene" uid="uid://chl4syoif26l2" path="res://scenes/ability_dash.tscn" id="2_kxsx4"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_v8g0a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfv53"]
+size = Vector2(0.029800002, 0.0133000305)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcfex"]
+size = Vector2(0.029799916, 0.013299977)
+
+[node name="Level1" instance=ExtResource("1_a1lxs")]
+
+[node name="Label" parent="CenterContainer" index="0"]
+text = "Level 8"
+
+[node name="Tutorial Label" parent="." index="2"]
+offset_left = 397.0
+offset_top = 737.0
+offset_right = 726.0
+offset_bottom = 824.0
+text = "Performing a dash action while already dashing refreshes duration of your current dash."
+
+[node name="Player" parent="." index="10"]
+position = Vector2(181, 897)
+
+[node name="Dash" parent="." index="11" instance=ExtResource("2_kxsx4")]
+position = Vector2(256, 876)
+
+[node name="Dash2" parent="." index="12" instance=ExtResource("2_kxsx4")]
+position = Vector2(450, 876)
+
+[node name="Dash3" parent="." index="13" instance=ExtResource("2_kxsx4")]
+position = Vector2(689, 876)
+
+[node name="Obstacle 1" type="StaticBody2D" parent="." index="14"]
+position = Vector2(-93.000854, -4848.0005)
+scale = Vector2(10000, 10000)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 1" index="0"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0.027400136, 0.58115005)
+scale = Vector2(0.029800007, 0.01330002)
+mesh = SubResource("QuadMesh_v8g0a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle 1" index="1"]
+position = Vector2(0.027400084, 0.58115005)
+shape = SubResource("RectangleShape2D_wfv53")
+
+[node name="Obstacle 2" type="StaticBody2D" parent="." index="15"]
+position = Vector2(267.99915, -4848.0005)
+scale = Vector2(10000, 10000)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 2" index="0"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0.06900191, 0.58115005)
+scale = Vector2(0.029800436, 0.0133000435)
+mesh = SubResource("QuadMesh_v8g0a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle 2" index="1"]
+position = Vector2(0.069000036, 0.58115005)
+shape = SubResource("RectangleShape2D_bcfex")
