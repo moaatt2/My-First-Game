@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://7dtf0pe7lk6j"]
+
+[ext_resource type="PackedScene" uid="uid://d1jto5xje8v3o" path="res://levels/level_01.tscn" id="1_oaeiq"]
+[ext_resource type="PackedScene" uid="uid://chl4syoif26l2" path="res://scenes/ability_dash.tscn" id="2_2ryhr"]
+[ext_resource type="PackedScene" uid="uid://ca2872q7qceir" path="res://scenes/ability_jump.tscn" id="3_hpfrn"]
+[ext_resource type="PackedScene" uid="uid://bmpb87i8prvdq" path="res://scenes/obstacle.tscn" id="4_hpfrn"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_voxu1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpedq"]
+size = Vector2(0.015999999, 0.039299995)
+
+[node name="Level1" instance=ExtResource("1_oaeiq")]
+
+[node name="Label" parent="CenterContainer" index="0"]
+text = "Level 9"
+
+[node name="Tutorial Label" parent="." index="2"]
+offset_left = 53.0
+offset_top = 788.0
+offset_right = 382.0
+offset_bottom = 925.0
+text = "Abilities respawn after use.
+
+You can to get them in the order you want."
+
+[node name="Dash" parent="." index="10" instance=ExtResource("2_2ryhr")]
+position = Vector2(210, 1009)
+
+[node name="Jump" parent="." index="11" instance=ExtResource("3_hpfrn")]
+position = Vector2(167, 1009)
+
+[node name="Jump2" parent="." index="12" instance=ExtResource("3_hpfrn")]
+position = Vector2(252, 1009)
+
+[node name="Obstacle3" parent="." index="13" instance=ExtResource("4_hpfrn")]
+position = Vector2(480.00003, 597)
+scale = Vector2(8, 4)
+
+[node name="Obstacle 1" type="StaticBody2D" parent="." index="14"]
+position = Vector2(-1050.0009, -4848.0005)
+scale = Vector2(10000, 10000)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 1" index="0"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0.15300006, 0.56815004)
+scale = Vector2(0.016000068, 0.03929999)
+mesh = SubResource("QuadMesh_voxu1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle 1" index="1"]
+position = Vector2(0.15300009, 0.56815004)
+shape = SubResource("RectangleShape2D_lpedq")
+
+[node name="Obstacle2" parent="." index="16" instance=ExtResource("4_hpfrn")]
+position = Vector2(960, 880.00006)
+scale = Vector2(8, 15)
+
+[node name="Jump3" parent="." index="17" instance=ExtResource("3_hpfrn")]
+position = Vector2(711, 841)
+
+[node name="Dash2" parent="." index="18" instance=ExtResource("2_2ryhr")]
+position = Vector2(712, 920)
