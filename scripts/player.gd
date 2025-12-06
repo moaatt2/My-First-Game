@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var gravity = 30
 @export var jump_force = 300
 
-var DASH_SPEED = 4
+var DASH_SPEED = 3
 var is_dashing = false
 var ability_queue = []
 
