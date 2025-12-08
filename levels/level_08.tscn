@@ -9,7 +9,7 @@
 size = Vector2(0.029800002, 0.0133000305)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcfex"]
-size = Vector2(0.029799916, 0.013299977)
+size = Vector2(0.029799916, 0.013199988)
 
 [node name="Level1" instance=ExtResource("1_a1lxs")]
 
@@ -30,12 +30,9 @@ position = Vector2(181, 897)
 position = Vector2(256, 876)
 
 [node name="Dash2" parent="." index="12" instance=ExtResource("2_kxsx4")]
-position = Vector2(450, 876)
+position = Vector2(563, 876)
 
-[node name="Dash3" parent="." index="13" instance=ExtResource("2_kxsx4")]
-position = Vector2(689, 876)
-
-[node name="Obstacle 1" type="StaticBody2D" parent="." index="14"]
+[node name="Obstacle 1" type="StaticBody2D" parent="." index="13"]
 position = Vector2(-93.000854, -4848.0005)
 scale = Vector2(10000, 10000)
 
@@ -49,16 +46,16 @@ mesh = SubResource("QuadMesh_v8g0a")
 position = Vector2(0.027400084, 0.58115005)
 shape = SubResource("RectangleShape2D_wfv53")
 
-[node name="Obstacle 2" type="StaticBody2D" parent="." index="15"]
+[node name="Obstacle 2" type="StaticBody2D" parent="." index="14"]
 position = Vector2(267.99915, -4848.0005)
 scale = Vector2(10000, 10000)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 2" index="0"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(0.06900191, 0.58115005)
-scale = Vector2(0.029800436, 0.0133000435)
+position = Vector2(0.06900191, 0.58120006)
+scale = Vector2(0.029800436, 0.013200024)
 mesh = SubResource("QuadMesh_v8g0a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle 2" index="1"]
-position = Vector2(0.069000036, 0.58115005)
+position = Vector2(0.069000036, 0.5812)
 shape = SubResource("RectangleShape2D_bcfex")

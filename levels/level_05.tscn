@@ -16,7 +16,6 @@ text = "Level 5"
 [node name="Tutorial Label" parent="." index="2"]
 visible = false
 offset_left = 102.0
-offset_top = 863.0
 offset_right = 358.0
 offset_bottom = 940.0
 

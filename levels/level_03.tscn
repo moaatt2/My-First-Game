@@ -9,7 +9,7 @@
 size = Vector2(0.029800002, 0.0133000305)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0vsl"]
-size = Vector2(0.029799929, 0.0133000575)
+size = Vector2(0.029799929, 0.013199976)
 
 [node name="Level1" instance=ExtResource("1_0mo0b")]
 
@@ -53,10 +53,10 @@ scale = Vector2(10000, 10000)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 2" index="0"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(0.06900191, 0.58115005)
-scale = Vector2(0.029800436, 0.0133000435)
+position = Vector2(0.06900191, 0.58120006)
+scale = Vector2(0.029800436, 0.013200024)
 mesh = SubResource("QuadMesh_lear0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle 2" index="1"]
-position = Vector2(0.06900005, 0.58115)
+position = Vector2(0.06900005, 0.5812)
 shape = SubResource("RectangleShape2D_p0vsl")
