@@ -1,14 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpl0jyyesjjep"]
+[gd_scene load_steps=7 format=3 uid="uid://dexi8ya1kqp3w"]
 
-[ext_resource type="PackedScene" uid="uid://5nb3osh5xkkw" path="res://levels/level_02.tscn" id="1_tghxx"]
+[ext_resource type="PackedScene" uid="uid://d1jto5xje8v3o" path="res://levels/level_01.tscn" id="1_eoivg"]
+[ext_resource type="PackedScene" uid="uid://bmpb87i8prvdq" path="res://scenes/obstacle.tscn" id="2_eoivg"]
+[ext_resource type="PackedScene" uid="uid://chl4syoif26l2" path="res://scenes/ability_dash.tscn" id="4_rj5u4"]
+[ext_resource type="PackedScene" uid="uid://ca2872q7qceir" path="res://scenes/ability_jump.tscn" id="4_tu44s"]
 
-[node name="Level10" instance=ExtResource("1_tghxx")]
+[sub_resource type="QuadMesh" id="QuadMesh_rj5u4"]
 
-[node name="ColorRect" parent="." index="0"]
-color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x27qk"]
+size = Vector2(0.015999999, 0.039299995)
+
+[node name="Level1" instance=ExtResource("1_eoivg")]
 
 [node name="Label" parent="CenterContainer" index="0"]
 text = "Level 10"
 
 [node name="Tutorial Label" parent="." index="2"]
 visible = false
+
+[node name="Player" parent="." index="10"]
+position = Vector2(113, 637)
+
+[node name="Obstacle 1" type="StaticBody2D" parent="." index="11"]
+position = Vector2(-1050.0009, -4848.0005)
+scale = Vector2(10000, 10000)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 1" index="0"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0.11629999, 0.56815004)
+scale = Vector2(0.016000068, 0.03929999)
+mesh = SubResource("QuadMesh_rj5u4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle 1" index="1"]
+position = Vector2(0.11630009, 0.56815004)
+shape = SubResource("RectangleShape2D_x27qk")
+
+[node name="Obstacle2" parent="." index="12" instance=ExtResource("2_eoivg")]
+position = Vector2(466.99988, 880)
+scale = Vector2(8, 15)
+
+[node name="Obstacle3" parent="." index="13" instance=ExtResource("2_eoivg")]
+position = Vector2(293, 1020)
+scale = Vector2(10, 1)
+
+[node name="Dash" parent="." index="14" instance=ExtResource("4_rj5u4")]
+position = Vector2(290, 924)
+
+[node name="Jump" parent="." index="15" instance=ExtResource("4_tu44s")]
+position = Vector2(290, 856)
