@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://cauwvfbpiov4o"]
+
+[ext_resource type="PackedScene" uid="uid://d1jto5xje8v3o" path="res://levels/level_01.tscn" id="1_rp27l"]
+[ext_resource type="PackedScene" uid="uid://bmpb87i8prvdq" path="res://scenes/obstacle.tscn" id="2_j745c"]
+[ext_resource type="PackedScene" uid="uid://chl4syoif26l2" path="res://scenes/ability_dash.tscn" id="3_a7ruh"]
+[ext_resource type="PackedScene" uid="uid://ca2872q7qceir" path="res://scenes/ability_jump.tscn" id="4_lnjaj"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_dgdix"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eiryh"]
+size = Vector2(0.015999999, 0.039299995)
+
+[node name="Level1" instance=ExtResource("1_rp27l")]
+
+[node name="Label" parent="CenterContainer" index="0"]
+text = "Level 11"
+
+[node name="Tutorial Label" parent="." index="2"]
+visible = false
+
+[node name="Player" parent="." index="10"]
+position = Vector2(113, 637)
+
+[node name="Obstacle 1" type="StaticBody2D" parent="." index="11"]
+position = Vector2(-1050.0009, -4848.0005)
+scale = Vector2(10000, 10000)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Obstacle 1" index="0"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0.11629999, 0.56815004)
+scale = Vector2(0.016000068, 0.03929999)
+mesh = SubResource("QuadMesh_dgdix")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle 1" index="1"]
+position = Vector2(0.11630009, 0.56815004)
+shape = SubResource("RectangleShape2D_eiryh")
+
+[node name="Obstacle2" parent="." index="12" instance=ExtResource("2_j745c")]
+position = Vector2(466.99988, 880)
+scale = Vector2(8, 15)
+
+[node name="Dash" parent="." index="13" instance=ExtResource("3_a7ruh")]
+position = Vector2(259, 856)
+
+[node name="Jump2" parent="." index="14" instance=ExtResource("4_lnjaj")]
+position = Vector2(322, 924)
+
+[node name="Obstacle3" parent="." index="15" instance=ExtResource("2_j745c")]
+position = Vector2(293, 1020)
+scale = Vector2(10, 1)
