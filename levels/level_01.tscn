@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://d1jto5xje8v3o"]
+[gd_scene load_steps=11 format=3 uid="uid://d1jto5xje8v3o"]
 
 [ext_resource type="PackedScene" uid="uid://b8826of3fxi4n" path="res://scenes/level_button.tscn" id="1_vn7o3"]
 [ext_resource type="PackedScene" uid="uid://5e27c4l0dy1t" path="res://scenes/player.tscn" id="2_mckh2"]
 [ext_resource type="PackedScene" uid="uid://c1peiq0gsxjlc" path="res://scenes/exit_door.tscn" id="3_81a5f"]
 [ext_resource type="PackedScene" uid="uid://btr7kck0a27wx" path="res://scenes/info_overlay.tscn" id="3_gg43x"]
 [ext_resource type="PackedScene" uid="uid://cu4qfg7h0n5an" path="res://scenes/reset_button.tscn" id="5_mllcm"]
+[ext_resource type="Script" uid="uid://devgx7kscavy7" path="res://scripts/control.gd" id="6_q7ibo"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ty3hu"]
 
@@ -13,6 +14,8 @@ size = Vector2(38.399998, 0.9999987)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81a5f"]
 size = Vector2(0.32000065, 10.3)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_mllcm"]
 
 [node name="Level1" type="Node2D"]
 
@@ -105,3 +108,18 @@ position = Vector2(1845, 1030)
 
 [node name="Player" parent="." instance=ExtResource("2_mckh2")]
 position = Vector2(72, 1030)
+
+[node name="Jump Button" type="TouchScreenButton" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(960.00006, 0)
+scale = Vector2(959.99994, 1080)
+texture_normal = SubResource("PlaceholderTexture2D_mllcm")
+action = "action"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 96.0
+offset_right = 960.0
+offset_bottom = 1080.0
+script = ExtResource("6_q7ibo")
